@@ -1,0 +1,24 @@
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+@import "~lightgallery/dist/css/lightgallery.min";
+@import "~lightslider/dist/css/lightslider.min";
+@import "~jquery-ui_1.12/jquery-ui";
+@import "~select2/dist/css/select2.min";
+@import "~@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4";
+@import "~aos/dist/aos";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "common/*";
+@import "components/*";
+@import "layouts/*";

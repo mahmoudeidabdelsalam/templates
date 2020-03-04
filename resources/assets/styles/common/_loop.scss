@@ -1,0 +1,93 @@
+// ==========================================
+// Loops
+// ==========================================
+//
+// ====== Theme Colors ======
+@each $theme-colors in $theme-color {
+  $name: nth($theme-colors, 1);
+  $brand-color: nth($theme-colors, 2);
+  $brand-text: nth($theme-colors, 3);
+
+  .bg-#{$name} {
+    background-color: $brand-color;
+    color: $brand-text;
+  }
+
+  .text-#{$name} {
+    color: $brand-color !important;
+
+    &.active {
+      &.text-active {
+        background-color: $brand-color !important;
+        color: $brand-white !important;
+      }
+    }
+  }
+
+  .border-#{$name} {
+    border-color: $brand-color;
+  }
+
+  .btn-#{$name} {
+    background-color: $brand-color !important;
+    color: $brand-text !important;
+    border-color: $brand-color !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .gradient-#{$name} {
+    background: linear-gradient(to bottom, transparent 0, $brand-color 90%);
+    width: 100%;
+  }
+}
+
+// ======= Fixed Height  =========
+@for $height from 1 through 15 {
+  .height-#{$height * 45} {
+    height: #{($height * 45)}px !important;
+  }
+}
+
+@for $heights from 1 through 10 {
+  .height-vh-#{$heights * 10} {
+    height: #{($heights * 10)}vh !important;
+  }
+}
+
+// ========== Display positions =======
+$positions: ( position "right")( position "left")( position "top")( position "bottom");
+
+@each $position in $positions {
+  .#{nth($position, 2)} {
+    #{nth($position,2)}: 0;
+  }
+}
+
+// ========== Text Size ============
+$textSize: (tiny: 12px, small: 14px, sm-medium: 18px , medium: 20px, large:32px, xlarge: 36px, subheadline: 64px, headline: 72px);
+
+@each $name,
+  $size in $textSize {
+  .text-#{$name} {
+    font-size: #{$size} !important;
+
+    @include media-breakpoint-down(md) {
+      @if $size == 72px {
+        font-size: #{($size / 2)} !important;
+      }
+
+      @if $size == 36px {
+        font-size: #{($size / 1.5)} !important;
+      }
+    }
+  }
+}
+
+.text-subheadline {
+  @include media-breakpoint-down(sm) {
+    font-size: 32px !important;
+  }
+}

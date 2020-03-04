@@ -1,0 +1,54 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+// ======== Grid settings ========
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// ======== border-raduis ========
+$primary-radius:       2px;
+
+// ===== Colors ======
+$brand-primary        : #1e6dfb;
+$brand-secondary      : #000dff;
+$brand-success        : #397730;
+$brand-white          : #fff;
+$brand-black          : #000;
+$brand-gray           : #333;
+$brand-gray-dark      : #282f39;
+$brand-gray-light     : rgba(61, 69, 82, 0.57);
+$brand-light          : #f9f9f9;
+$brand-pink           : #be4270;
+$brand-blue           : #0d3e73;
+$brand-silver         : #bdbdbd;
+$brand-purple         : #8b3d88;
+$brand-green          : #5fc754;
+
+// ==== list with all theme colors to be reused in @each =====
+$theme-color:
+  // color name     	color brand         text color    	secondry
+  "primary"          	$brand-primary      #fff       $brand-white,
+  "secondary"         $brand-secondary    #fff       $brand-white,
+  "success"           $brand-success      #fff       $brand-white,
+  "white"             $brand-white        #333       $brand-white,
+  "black"          	  $brand-black        #fff       $brand-white,
+  "gray"          	  $brand-gray         #fff       $brand-white,
+  "gray-dark"         $brand-gray-dark    #000       $brand-white,
+  "gray-light"        $brand-gray-light   #000       $brand-white,
+  "light"             $brand-light        #282f39    $brand-white,
+  "pink"          		$brand-pink         #000       $brand-white,
+  "blue"          		$brand-blue         #fff       $brand-white,
+  "silver"          	$brand-silver       #fff       $brand-white,
+  "purple"            $brand-purple       #fff       $brand-white,
+  "green"             $brand-green        #fff       $brand-white;
+
+//** Global text color on `<body>`.
+$text-color: $brand-black !default;
+
+//** Global textual link color.
+$link-color: $brand-black !default;
+
+//** Link hover color set via `darken()` function.
+$link-hover-color : darken($link-color, 15%) !default;
+
+$font-Roboto : "Roboto", sans-serif, Helvetica, Arial;

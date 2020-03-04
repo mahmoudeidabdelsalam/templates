@@ -1,0 +1,109 @@
+.card-columns {
+  .card {
+    @include media-breakpoint-up(md) {
+      flex: 0 0 30%;
+    }
+  }
+}
+
+.review-and-download {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(61, 69, 82);
+  font-size: 14px;
+
+  .star-rating {
+    float: left !important;
+    margin: 3px 3px 0 0;
+
+    span {
+      &::before {
+        color: rgb(237, 138, 26);
+      }
+    }
+  }
+
+  .download {
+    border: 1px solid rgb(232, 232, 232);
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.13px;
+    text-transform: uppercase;
+    color: rgb(237, 138, 25);
+    padding: 3px 7px;
+    margin-top: -4px;
+  }
+}
+
+.user-not-login {
+  height: 71vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+span.status {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
+  text-transform: capitalize;
+  color: $brand-white;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background-color: rgb(5, 5, 5);
+  padding: 4px 10px;
+  border-radius: 8px;
+
+  &.drafts {
+    background: rgb(61, 69, 82);
+  }
+
+  &.pending {
+    background: rgb(237, 138, 25);
+  }
+
+  &.live {
+    background: rgb(9, 188, 80);
+  }
+
+  &.rejected {
+    background: rgb(255, 0, 0);
+  }
+}
+
+.comment-reply-link {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.132987px;
+  text-transform: capitalize;
+  color: $brand-primary;
+}
+
+.border-lines {
+  background-image: url("../images/border-lines.png");
+}
+
+.customer-download {
+  .review-and-download {
+    .download {
+      border: none;
+      white-space: nowrap;
+      padding: 0;
+      margin-top: 0;
+
+      button.loading {
+        padding: 0 !important;
+
+        &::after {
+          top: 0;
+          left: 13%;
+        }
+      }
+    }
+  }
+}
