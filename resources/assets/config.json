@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/premast",
-  "devUrl": "http://dev.premast.com",
+  "publicPath": "/app/themes/templates",
+  "devUrl": "http://templates.premast.com",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
